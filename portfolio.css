@@ -1,0 +1,204 @@
+/* Portfolio start */
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000;
+}
+
+.portfolio {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 100px;
+}
+
+.portfolio h1 {
+  font-size: 56px;
+  font-weight: 500;
+  color: #fbfbfb;
+  font-family: "Cinzel", serif;
+}
+
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 50px;
+  gap: 2.5vh;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  background-color: #3d3e42;
+  border-radius: 20px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5vh;
+  transition: all ease 0.5s;
+}
+
+.portfolio-card img {
+  position: relative;
+  height: 30vw;
+  width: 30vw;
+  object-fit: cover;
+}
+
+.portfolio-card .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5vh;
+  height: 30vw;
+  width: 21vw;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+
+.portfolio-card .overlay h3 {
+  color: #fbfbfb;
+  font-size: 24px;
+  font-family: "Cinzel", serif;
+}
+
+.portfolio-card .overlay p {
+  color: #fbfbfb;
+  font-size: 16px;
+  text-align: center;
+  font-family: "Bodoni Moda", serif;
+}
+
+.portfolio-card .overlay button {
+  height: 36px;
+  width: 108px;
+  background-color: #fec86a;
+  border: 1px solid #fec86a;
+  border-radius: 8px;
+  color: #34353b;
+  font-size: 12px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+}
+
+.portfolio-card .overlay:hover {
+  opacity: 1;
+}
+
+.portfolio button {
+  margin-top: 50px;
+  height: 48px;
+  width: 144px;
+  background-color: #fec86a;
+  border: 1px solid #fec86a;
+  border-radius: 8px;
+  color: #34353b;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.portfolio button:hover {
+  background-color: #cc9e4e;
+}
+
+/* Media Queries for Responsive Design */
+
+@media screen and (max-width: 992px) {
+  .portfolio {
+    padding: 50px 50px;
+  }
+  .portfolio-card .overlay {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 50px 30px;
+  }
+  .portfolio-cards {
+    grid-template-columns: auto auto;
+  }
+  .portfolio-card {
+    height: 45vw;
+    width: 45vw;
+  }
+  .portfolio-card img {
+    height: 45vw;
+    width: 45vw;
+  }
+  .portfolio-card .overlay {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio {
+    padding: 40px 20px;
+  }
+  .portfolio-cards {
+    grid-template-columns: auto;
+  }
+  .portfolio-card {
+    height: 70vw;
+    width: 70vw;
+  }
+  .portfolio-card img {
+    height: 70vw;
+    width: 70vw;
+  }
+  .portfolio h1 {
+    font-size: 36px;
+  }
+  .portfolio-card .overlay h3 {
+    font-size: 20px;
+  }
+  .portfolio-card .overlay p {
+    font-size: 14px;
+  }
+  .portfolio-card .overlay {
+    width: 49vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio {
+    padding: 30px 10px;
+  }
+  .portfolio-card {
+    height: 90vw;
+    width: 90vw;
+  }
+  .portfolio-card img {
+    height: 90vw;
+    width: 90vw;
+  }
+  .portfolio h1 {
+    font-size: 24px;
+  }
+  .portfolio button {
+    height: 42px;
+    width: 126px;
+    font-size: 14px;
+  }
+  .portfolio-card .overlay {
+    width: 49vw;
+  }
+}
