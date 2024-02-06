@@ -32,3 +32,8 @@ For support, email jayasriraam.job@gmail.com
 
 We welcome contributions to enhance the portfolio section! If you have suggestions for new features, bug fixes, or improvements, please feel free to open an issue or submit a pull request on our GitHub repository.
 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
